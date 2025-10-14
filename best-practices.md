@@ -1,5 +1,7 @@
 # **Lovable 最佳实践指南**
 
+> 原文出处：https://docs.lovable.dev/tips-tricks/best-practice
+
 > **目标：** 帮助所有 Lovable 用户——无论新手还是资深开发者——快速入门、避开常见误区，高效构建项目。
 
 ## 1. 打牢基础：善用 Knowledge 文件
